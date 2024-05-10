@@ -1,0 +1,131 @@
+/* Universal Styles */
+html {
+    font-family: Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  
+  body {
+      background-color: #E1E9FC;
+      color: #3A0B41;
+      position: center;
+      top: 6rem; /* To offset for fixed header. */
+      text-align: center;
+  }
+  
+  h1 {
+    font-size: 3rem;
+  }
+  
+  h2 {
+    color: #015B3D;
+    font-size: 2rem;
+  }
+  
+  .img-container {
+      overflow: hidden;
+      display: grid;
+  }
+  
+  .img-container img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      padding: 1rem 1rem;
+  }
+  
+  /* Header */
+  header, footer {
+      z-index: 100;
+      width: 100%;
+      border-bottom: solid 1px #A3E9AD;
+      background-color: #3A0B41;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  nav ul {
+      display: flex;
+      list-style-type: none;
+  }
+  
+  nav li {
+      padding-left: 3.5rem;
+  }
+  
+  nav a {
+      vertical-align: bottom;
+      color: #F1EFEC;
+      text-decoration: none;
+  }
+  
+  header nav a {
+      font-size: 2rem;
+  }
+
+  
+/* Banner */
+.banner {
+    position: relative;
+    height: 30rem;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr 2fr;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background-image: url("https://static-assets.codecademy.com/Paths/front-end-career-path/responsive-club-website/marathon-runners.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.banner h1 {
+    position: relative;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Mission Statement */
+
+.mission-statement p {
+    font-size: 1.5rem;
+}
+
+/* Run Info */
+.run-info {
+    display: grid;
+}
+
+/* small screens */
+@media only screen and (max-width: 600px){    
+    header nav ul {
+        display: block;
+        text-align: left;
+    }
+    
+    header nav a {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .mission-statement p {
+      font-size: 1rem;
+    }
+  }
